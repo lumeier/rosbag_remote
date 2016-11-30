@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="rosbag_remote" type="rosbag_remote_node" name="rosbag_remote" output="screen">
+
+  </node>
+</launch>

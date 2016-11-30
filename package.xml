@@ -1,0 +1,19 @@
+<package>
+  <name>rosbag_remote</name>
+  <version>0.0.0</version>
+  <description>
+	ROS_Node to remotely trigger the recording of rosbags (eg. from Matlab)
+  </description>
+  <maintainer email="lumeier@student.ethz.ch">Lukas Meier</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>rosbag</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>rosbag</run_depend>
+</package>
