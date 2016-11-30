@@ -60,7 +60,6 @@ RosbagRemote::RosbagRemote() : nh_("~") {
           timeinfo = localtime(&rawtime);
           strftime(buffer,80,"_%Y-%m-%d-%H:%M:%S",timeinfo);
           std::string date(buffer);
-          std::cout << date;
 
           //Open a rosbag and start recording
           bag.open(hdir + folder + prefix + date + ".bag", rosbag::bagmode::Write);
@@ -86,7 +85,7 @@ RosbagRemote::RosbagRemote() : nh_("~") {
           const sensor_msgs::NavSatFix::ConstPtr& msg = event.getMessage();
           ros::Time receipt_time = event.getReceiptTime();
 
-          std::cout << "Write message from Topic: " << topic << "\n";
+          // std::cout << "Write message from Topic: " << topic << "\n";
 
           bag.write(topic,receipt_time,msg);
         }
@@ -100,7 +99,7 @@ RosbagRemote::RosbagRemote() : nh_("~") {
           const sensor_msgs::FluidPressure::ConstPtr& msg = event.getMessage();
           ros::Time receipt_time = event.getReceiptTime();
 
-          std::cout << "Write message from Topic: " << topic << "\n";
+          // std::cout << "Write message from Topic: " << topic << "\n";
 
           bag.write(topic,receipt_time,msg);
         }
@@ -114,7 +113,7 @@ RosbagRemote::RosbagRemote() : nh_("~") {
           const sensor_msgs::JointState::ConstPtr& msg = event.getMessage();
           ros::Time receipt_time = event.getReceiptTime();
 
-          std::cout << "Write message from Topic: " << topic << "\n";
+          // std::cout << "Write message from Topic: " << topic << "\n";
 
           bag.write(topic,receipt_time,msg);
         }
@@ -128,7 +127,7 @@ RosbagRemote::RosbagRemote() : nh_("~") {
           const std_msgs::Float64::ConstPtr& msg = event.getMessage();
           ros::Time receipt_time = event.getReceiptTime();
 
-          std::cout << "Write message from Topic: " << topic << "\n";
+          // std::cout << "Write message from Topic: " << topic << "\n";
 
           bag.write(topic,receipt_time,msg);
         }
@@ -142,7 +141,7 @@ RosbagRemote::RosbagRemote() : nh_("~") {
           const sensor_msgs::Image::ConstPtr& msg = event.getMessage();
           ros::Time receipt_time = event.getReceiptTime();
 
-          std::cout << "Write message from Topic: " << topic << "\n";
+          // std::cout << "Write message from Topic: " << topic << "\n";
 
           bag.write(topic,receipt_time,msg);
         }
@@ -156,7 +155,7 @@ RosbagRemote::RosbagRemote() : nh_("~") {
           const nav_msgs::Odometry::ConstPtr& msg = event.getMessage();
           ros::Time receipt_time = event.getReceiptTime();
 
-          std::cout << "Write message from Topic: " << topic << "\n";
+          // std::cout << "Write message from Topic: " << topic << "\n";
 
           bag.write(topic,receipt_time,msg);
         }
@@ -170,7 +169,7 @@ RosbagRemote::RosbagRemote() : nh_("~") {
           const std_msgs::Float64MultiArray::ConstPtr& msg = event.getMessage();
           ros::Time receipt_time = event.getReceiptTime();
 
-          std::cout << "Write message from Topic: " << topic << "\n";
+          // std::cout << "Write message from Topic: " << topic << "\n";
 
           bag.write(topic,receipt_time,msg);
         }
@@ -184,7 +183,7 @@ RosbagRemote::RosbagRemote() : nh_("~") {
           const std_msgs::Empty::ConstPtr& msg = event.getMessage();
           ros::Time receipt_time = event.getReceiptTime();
 
-          std::cout << "Write message from Topic: " << topic << "\n";
+          // std::cout << "Write message from Topic: " << topic << "\n";
 
           bag.write(topic,receipt_time,msg);
         }
